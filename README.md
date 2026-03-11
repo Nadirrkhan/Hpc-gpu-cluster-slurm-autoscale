@@ -17,3 +17,9 @@
 - /monitoring: Alerting and dashboard metrics.
 - /scripts: Job submission files.
 - /screenshots: Performance captures showing 100% GPU utilization.
+
+## Hardware Gallery
+| Physical Setup | 100% Load Dashboard |
+| :---: | :---: |
+| ![Physical View](screenshots/cluster_setup_physical_view.jpg) | ![Grafana Load](screenshots/cluster_dual_node_100_load.png) |
+| *The physical GPU nodes* | *Dual 1080 Ti at full capacity* |
