@@ -6,7 +6,9 @@
 #SBATCH --time=00:05:00
 #SBATCH --output=universal_out_%j.log
 
-echo "Starting Universal Stress on $(hostname)"
+echo "Starting Universal Resource Stress Test on $(hostname)"
 
-# Ye command GPU cores ko hit karegi 120 seconds ke liye
+# This command generates a static load on GPU cores and CPU for 120 seconds.
+# It monitors GPU utilization while simultaneously performing random data hashing 
+# to stress the system's overall compute and I/O throughput.
 timeout 120s bash -c "while true; do nvidia-smi -q -d UTILIZATION > /dev/null; dd if=/dev/urandom bs=1M count=100 | md5sum > /dev/null; done"
