@@ -23,3 +23,15 @@
 | :---: | :---: |
 | ![Physical View](screenshots/cluster_setup_physical_view.jpg) | ![Grafana Load](screenshots/cluster_dual_node_100_load.png) |
 | *The physical GPU nodes* | *Dual 1080 Ti at full capacity* |
+
+# Infrastructure & Provisioning Layer (MAAS)
+
+Before configuring Slurm, the underlying bare-metal infrastructure was provisioned and managed using **Canonical MAAS (Metal as a Service)**. This allows for rapid operating system deployment, network orchestration, and node maintenance.
+
+### Key Infrastructure Details:
+- **Provisioning Tool:** Canonical MAAS (Web UI Dashboard)
+- **Deployed OS:** Ubuntu 22.04 LTS (All Nodes)
+- **Control Machine:** Provisions and monitors worker nodes.
+
+### Evidence:
+- **MAAS Dashboard Screenshot:** [maas.png](./screenshots/maas.png) (Shows NFS storage, node01, and node02 as DEPLOYED).
