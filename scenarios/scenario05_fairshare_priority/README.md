@@ -20,3 +20,12 @@
 - **Status Screenshot:** [FairshareQOS.png](./FairshareQOS.png)
 - **Output Validation:** `cat /cluster/manager.out` -> "Manager Success on node02"
 
+
+### Resource Utilization Summary (Today's Load):
+| User | Total Jobs Submitted | Role / Priority |
+|------|----------------------|-----------------|
+| **ali** | 15 | Standard User |
+| **miller** | 22 | Standard User (Heavy Load) |
+| **smith** | 22 | Manager (VIP Priority) |
+
+**Observation:** Despite high load from Miller and Ali, Smith (Manager) was consistently able to bypass the queue due to the configured QOS settings.
